@@ -27,6 +27,10 @@ var HelloWorldLayer = cc.Layer.extend({
             if(cc.rectIntersectsRect(bird,b)){
                 this.removeChild(pgnode,true);
             }
+          if(this.BirdNode.getPositionY()<100){
+              this.BirdNode.setPosition(150,200);
+              cc.log(this.BirdNode.getPositionY());
+          }
         }  
     },
     began:function(location,event){
